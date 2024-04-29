@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/9c67facb22.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="w-screen h-screen box-border overflow-x-hidden bg-[#112d4e] bg-mainbg">
+        <div class="flex flex-col max-w-[550px] mx-auto gap-12 py-8">
+            <h1 class="text-light2 font-bold text-3xl text-center">WEATHER APP</h1>
+            <div class="flex justify-between items-center">
+                <span class="cursor-pointer bg-[#dbe2ef82] text-light2 px-4 py-1 tracking-wider font-medium rounded-md" user>Your Weather</span>
+                <span class="cursor-pointer text-light2 px-4 py-1 tracking-wider font-medium rounded-md" search>Search Weather</span>
+            </div>
+            <div class="flex flex-col gap-10">
+                <div class="hidden flex-col items-center gap-4 " id="grant">
+                    <img src="./16 - Weather  App/Images/location.png" class="w-20">
+                    <h2 class="font-bold text-3xl text-light2 ">Grant Location Access</h2>
+                    <p class="text-light2 opacity-95 text-sm">Allow access to get weather information</p>
+                    <button class="text-light2 bg-dark2 px-6 py-2 rounded-md font-medium" grant>GRANT ACCESS</button>
+                </div>
+                <form class="hidden gap-2 items-center" form>
+                    <input type="text" placeholder="Search for city..." class="outline-none px-6 py-2 rounded-lg bg-[#dbe2ef82] placeholder:text-light1 placeholder:font-medium text-light2 focus:border-[3px] focus:border-light1 font-medium w-11/12" id="input">
+                    <button type="submit" class="bg-dark2 rounded-full w-10 h-10"><i class="fa-solid fa-magnifying-glass text-light2 p-3 text-center"></i></button>
+                </form>
+                <div class="hidden flex-col items-center" load>
+                    <img src="./16 - Weather  App/Images/loading.gif" class="w-40">
+                    <p class="text-light2 text-lg font-semibold">LOADING</p>
+                </div>
+                <div class="hidden flex-col gap-4 items-center" info>
+                    <div class="flex items-center gap-2">
+                        <h3 class="text-light2 text-2xl tracking-wide" city></h3>
+                        <img class="w-10" country/>
+                    </div>
+                    <p class="capitalize text-light2 text-xl" desc></p>
+                    <img class="w-20 -my-4" icon/>
+                    <p class="text-4xl text-light2 font-bold" temp></p>
+                    <div class="grid grid-cols-3 grid-rows-1 gap-5 w-full">
+                        <div class="bg-[#dbe2ef82] rounded-md flex flex-col  items-center py-3">
+                            <img src="./16 - Weather  App/Images/wind.png" class="w-16">
+                            <p class="text-light2">WINDSPEED</p>
+                            <span class="text-light2" wind></span>
+                        </div>
+                        <div class="bg-[#dbe2ef82] rounded-md flex flex-col  items-center py-3">
+                            <img src="./16 - Weather  App/Images/humidity.png" class="w-16">
+                            <p class="text-light2">HUMIDITY</p>
+                            <span class="text-light2" humid></span>
+                        </div>
+                        <div class="bg-[#dbe2ef82] rounded-md flex flex-col  items-center py-3">
+                            <img src="./16 - Weather  App/Images/cloud.png" class="w-16">
+                            <p class="text-light2">CLOUDS</p>
+                            <span class="text-light2" cloud></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden flex-col items-center gap-5" err>
+                    <img src="./16 - Weather  App/Images/not-found.png" class="hidden w-2/4 -my-5" eimg>
+                    <p class="text-light2 opacity-95 " emsg></p>
+                    <button class="hidden text-light2 bg-dark2 px-6 py-2 rounded-md font-medium w-fit" ebtn>Retry Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
